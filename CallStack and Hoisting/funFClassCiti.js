@@ -69,18 +69,18 @@
 
 ///FUNCTION AS POPERTY OF CLASS / OBJECT
 
-// let obj = {
-//   age: 22,
-//   fName: "Bhagvat",
-//   weight: 58,
-//   height: 180,
-//   greet: () => {
-//     console.log("Hello everyone my name is Bhagvat.....!");
-//   },
-// };
+let obj = {
+  age: 22,
+  fName: "Bhagvat",
+  weight: 58,
+  height: 180,
+  greet: () => {
+    console.log("Hello everyone my name is Bhagvat.....!");
+  },
+};
 
-// console.log(obj);
-// obj.greet();
+console.log(obj);
+obj.greet();
 
 
 // PS D:\Learning JS\CallStack and Hoisting> node funFClassCiti.js

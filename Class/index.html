@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        str=""
+        function concattoinput(inp)
+        {
+            str=str+inp
+            document.getElementById("inp").value=str
+        }
+        function evaluate1()
+        {
+            console.log("we are in evaluate")
+            res=eval(str)
+            document.getElementById("inp").value=res
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="inp">
+    <br>
+    <button onclick="concattoinput('1')">1</button>
+    <button onclick="concattoinput('2')">2</button>
+    <button onclick="concattoinput('3')">3</button>
+    <button onclick="concattoinput('4')">4</button>
+    <button onclick="concattoinput('5')">5</button>
+    <br>
+    <button onclick="concattoinput('+')">+</button>
+    <button onclick="concattoinput('-')">-</button><br>
+    <button onclick="evaluate1()">=</button>
+</body>
+</html>

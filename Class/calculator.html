@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .calculator {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        .calculator input[type="text"] {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .calculator button {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+
+        .calculator .row {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        let str = "";
+
+        function concattoinput(inp) {
+            str += inp;
+            document.getElementById("inp").value = str;
+        }
+
+        function evaluate1() {
+            try {
+                let res = eval(str);
+                document.getElementById("inp").value = res;
+                str = res.toString(); // Reset str to the result for further calculations
+            } catch (e) {
+                document.getElementById("inp").value = "Error";
+                str = ""; // Reset str on error
+            }
+        }
+
+        function clearInput() {
+            str = "";
+            document.getElementById("inp").value = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="inp" readonly>
+        <div class="row">
+            <button onclick="concattoinput('1')">1</button>
+            <button onclick="concattoinput('2')">2</button>
+            <button onclick="concattoinput('3')">3</button>
+        </div>
+        <div class="row">
+            <button onclick="concattoinput('4')">4</button>
+            <button onclick="concattoinput('5')">5</button>
+            <button onclick="concattoinput('6')">6</button>
+        </div>
+        <div class="row">
+            <button onclick="concattoinput('7')">7</button>
+            <button onclick="concattoinput('8')">8</button>
+            <button onclick="concattoinput('9')">9</button>
+        </div>
+        <div class="row">
+            <button onclick="concattoinput('+')">+</button>
+            <button onclick="concattoinput('-')">-</button>
+            <button onclick="concattoinput('0')">0</button>
+        </div>
+        <div class="row">
+            <button onclick="concattoinput('*')">*</button>
+            <button onclick="concattoinput('/')">/</button>
+            <button onclick="clearInput()">C</button>
+        </div>
+        <div class="row">
+            <button onclick="evaluate1()">=</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial and Multiplication Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      .output {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 200px;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        padding: 5px;
+        text-align: center;
+      }
+
+      .controls {
+        margin-bottom: 20px;
+      }
+
+      .controls input {
+        padding: 5px;
+        margin-right: 10px;
+      }
+
+      .controls button {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .controls button:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .result {
+        margin-top: 10px;
+      }
+    </style>
+    <script>
+
+        
+      function factorial() {
+        const num = parseInt(document.getElementById("inp").value);
+        if (isNaN(num) || num < 0) {
+          document.getElementById("res").innerText =
+            "Please enter a valid non-negative number.";
+          return;
+        }
+
+        let fact = 1;
+        for (let i = 1; i <= num; i++) {
+          fact *= i;
+        }
+
+        document.getElementById(
+          "res"
+        ).innerText = `The factorial of ${num} is ${fact}`;
+      }
+
+      function printTable() {
+        const num = parseInt(document.getElementById("inp").value);
+        if (isNaN(num)) {
+          document.getElementById("res").innerText =
+            "Please enter a valid number.";
+          return;
+        }
+
+        let output = "<div class='output'>";
+
+        for (let k = num; k <= num + 5; k++) {
+          output += "<table><tr><th colspan='5'>Table of " + k + "</th></tr>";
+          for (let i = 1; i <= 10; i++) {
+            const res = k * i;
+            output += `<tr><td>${k}</td><td>x</td><td>${i}</td><td>=</td><td>${res}</td></tr>`;
+          }
+          output += "</table>";
+        }
+
+        output += "</div>";
+        document.getElementById("res").innerHTML = output;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="controls">
+      <label for="inp">Enter a number:</label>
+      <input type="text" id="inp" placeholder="Enter number" />
+      <button onclick="factorial()">Factorial</button>
+      <button onclick="printTable()">Print Table</button>
+    </div>
+    <div id="res" class="result"></div>
+  </body>
+</html>
