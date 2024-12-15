@@ -58,8 +58,6 @@
       }
     </style>
     <script>
-
-        
       function factorial() {
         const num = parseInt(document.getElementById("inp").value);
         if (isNaN(num) || num < 0) {
@@ -88,7 +86,7 @@
 
         let output = "<div class='output'>";
 
-        for (let k = num; k <= num + 5; k++) {
+        for (let k = num; k <= num + 10; k++) {
           output += "<table><tr><th colspan='5'>Table of " + k + "</th></tr>";
           for (let i = 1; i <= 10; i++) {
             const res = k * i;
