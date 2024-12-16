@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+        arr=[5,1,1,1,4,3,53,643435,354,32,432,5,34,5,43,54,3334,232,43]
+       
+        sumofarray=function(prevvalue,currvalue,index)
+        {
+
+            
+            if(prevvalue>currvalue)
+                return currvalue
+            else
+                return prevvalue
+        }
+       
+       
+        res=arr.reduce(sumofarray)
+
+        console.log("The sum of array is "+res)
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
