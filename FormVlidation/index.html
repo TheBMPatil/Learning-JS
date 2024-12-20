@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation</title>
+  <script src="script.js" defer></script> <!-- Link to the external script -->
+</head>
+<body>
+
+  <form id="userForm" onsubmit="return validateForm(event)">
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <!-- Subjects (Checkboxes) -->
+    <fieldset id="subjects">
+      <legend>Subjects:</legend>
+      <input type="checkbox" id="subject1" name="subject" value="Math">
+      <label for="subject1">Math</label><br>
+      <input type="checkbox" id="subject2" name="subject" value="Science">
+      <label for="subject2">Science</label><br>
+      <input type="checkbox" id="subject3" name="subject" value="History">
+      <label for="subject3">History</label><br><br>
+    </fieldset>
+
+    <!-- Gender (Radio Buttons) -->
+    <fieldset id="gender">
+      <legend>Gender:</legend>
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label><br>
+      <input type="radio" id="other" name="gender" value="Other">
+      <label for="other">Other</label><br><br>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

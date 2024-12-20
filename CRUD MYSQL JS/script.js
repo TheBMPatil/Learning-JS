@@ -48,7 +48,7 @@ document.getElementById("addUserForm").addEventListener("submit", (e) => {
     body: JSON.stringify({ name, email }),
   }).then((response) => {
     if (response.ok) {
-      fetchUsers();
+      fetchUsers(); 
       document.getElementById("addUserForm").reset();
       showMessage("User added successfully");
     } else {
