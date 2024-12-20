@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form with Validation</title>
-  <script src="script.js" defer></script> <!-- Link to the external script -->
+ 
+
 </head>
 <body>
 
-  <form id="userForm" onsubmit="return validateForm(event)">
+  <form id="userForm">
     <!-- Name -->
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br><br>
@@ -43,7 +44,7 @@
       <label for="other">Other</label><br><br>
     </fieldset>
 
-    <button type="submit">Submit</button>
+    <button type="submit" id="submitbtn">Submit</button>
   </form>
 
 </body>
