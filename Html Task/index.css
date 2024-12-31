@@ -1,0 +1,20 @@
+#image {
+  max-width: 300px;
+}
+
+#check{
+    display: flex;
+}
+
+#links{
+    padding: 20px;
+    display: flex;
+   
+}
+.tablediv{
+    display: flex;
+}
+.linkedimgs{
+    max-width: 300px;
+    padding: 50px;
+}
